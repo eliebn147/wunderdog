@@ -1,0 +1,53 @@
+@if (this.dashBoardService.getDogProfile()) {
+  <div class="dog-profile">
+    <div class="creation">
+      <div>
+        <div class="inline-block">{{ this.dashBoardService.getDogProfile().createdBy.label + ':' }}&nbsp;</div>
+        <div class="inline-block">{{ this.dashBoardService.getDogProfile().createdBy.value }}</div>
+      </div>
+      <div>
+        <div class="inline-block">{{ this.dashBoardService.getDogProfile().date.label + ':' }}&nbsp;</div>
+        <div class="inline-block">{{ this.dashBoardService.getDogProfile().date.value }}</div>
+      </div>
+    </div>
+    <div class="identification">
+      <div class="name">{{ this.dashBoardService.getDogProfile().dog.name }}</div>
+      <div>{{ this.dashBoardService.getDogProfile().dog.barcode }}</div>
+    </div>
+    <div class="flex justify-content-between information w-full">
+      <div>{{ this.dashBoardService.getDogProfile().dog.id }}</div>
+      <div>|</div>
+      <div>{{ this.dashBoardService.getDogProfile().dog.age }}</div>
+      <div>|</div>
+      <div>{{ this.dashBoardService.getDogProfile().dog.sex }}</div>
+    </div>
+    <div class="flex w-full justify-content-center gap-2">
+      <p-button label="Manage Dog" icon="pi pi-cog" [rounded]="true" size="small"/>
+      <p-button label="Edit Profile" icon="pi pi-pen-to-square" [rounded]="true" [outlined]="true" size="small"/>
+    </div>
+    <div>
+      <img class="dog-image" [src]="dashBoardService.getDogProfile().dog.profileImageUrl.value"
+           alt="{{ dashBoardService.getDogProfile().dog.name }}"/>
+    </div>
+    <div class="grid grid-nogutter">
+      @for (data of dashBoardService.getDogProfile().dog.primary; track $index) {
+        <div class="col-6 detailed-info">
+          <div class="label">{{data.label + ':'}}</div>
+          <div class="value">{{data.value}}</div>
+        </div>
+      }
+    </div>
+    <div class="flex w-full">
+      <hr class="w-full"/>
+    </div>
+    <div class="grid grid-nogutter">
+      @for (data of dashBoardService.getDogProfile().dog.secondary; track $index) {
+        <div class="col-6 detailed-info">
+          <div class="label">{{data.label + ':'}}</div>
+          <div class="value">{{data.value}}</div>
+        </div>
+      }
+    </div>
+  </div>
+}
+

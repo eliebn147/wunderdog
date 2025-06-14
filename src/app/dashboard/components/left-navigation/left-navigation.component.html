@@ -1,0 +1,8 @@
+<div class="left-navigation">
+  <div class="navigation-icons" [class.active]="dashboardService.getActiveRoute() === 'overview'" (click)="navigateTo('dashboard', 'overview')">
+    <i class="pi pi-user"></i>
+  </div>
+  <div class="navigation-icons" [class.active]="dashboardService.getActiveRoute() === 'kennel'" (click)="navigateTo('dashboard', 'kennel')">
+    <i class="pi pi-home"></i>
+  </div>
+</div>
