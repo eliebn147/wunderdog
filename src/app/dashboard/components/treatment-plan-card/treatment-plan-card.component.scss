@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid var(--p-primary-500);
+  border-radius: 8px;
+  background-color: #f4f7fc;
+  min-width: 275px;
+  height: 100%;
+
+  .title {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .icon {
+    font-size: 12px;
+  }
+
+  .label {
+    font-size: 10px;
+    font-weight: 600;
+    width: 125px;
+  }
+
+  .value {
+    font-size: 10px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}

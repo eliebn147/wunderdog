@@ -1,0 +1,7 @@
+<div class="flex align-items-center column-gap-2">
+  <i class="pi" [ngClass]="{
+    'pi-check-circle success': severity() === 'success',
+    'pi-exclamation-triangle warning': severity() === 'warning'
+  }"></i>
+  <div>{{ value() }}</div>
+</div>

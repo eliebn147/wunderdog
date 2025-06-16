@@ -1,0 +1,25 @@
+<div class="p-3 text-center">
+  <div class="grid grid-nogutter justify-content-center mb-3 row-gap-2">
+    <div class="col-6">
+      <div class="name">{{ this.dashBoardService.getDogProfile().dog.name }}</div>
+      <img class="dog-image" [src]="dashBoardService.getDogProfile().dog.profileImageUrl.value"
+           alt="{{ dashBoardService.getDogProfile().dog.name }}"/>
+      @if (showFullRecord()) {
+        @for (info of dashBoardService.getDogOverview().information; track $index) {
+          <app-dog-overview-information-status @fadeSlide [severity]="info.severity" [value]="info.value"/>
+        }
+      }
+    </div>
+    <div class="col-6">
+      <app-overview-score label="MISSION READINESS SCORE" style="display: block; width: 15rem; margin-bottom: 0.5rem"/>
+      <app-overview-score label="PAST READINESS SCORE" severity="secondary" style="display: block; width: 15rem; margin-bottom: 0.5rem"/>
+    </div>
+    <div class="col-12">
+      @if (showFullRecord()) {
+        <app-weight-trend @fadeSlide style="display: block; width: 30rem;"/>
+      }
+    </div>
+  </div>
+  <p-button [rounded]="true" [label]="showFullRecord() ? 'View Brief Record' : 'View Full Record'" size="small"
+            (onClick)="showFullRecord.set(!showFullRecord())"></p-button>
+</div>

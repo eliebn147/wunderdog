@@ -10,6 +10,7 @@ export class DashboardService {
   private activeRoute = signal<string>("overview");
   private dogProfile = signal<any>(null);
   private dogOverview = signal<any>(null);
+  public dogDialogVisible = signal<boolean>(false);
 
   getActiveRoute() {
     return this.activeRoute();

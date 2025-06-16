@@ -21,7 +21,10 @@ const preset = definePreset(Aura, {
     button: {
       css: () => `
         .p-button-sm .p-button-icon {
-          font-size: 0.75rem;
+          font-size: 0.675rem;
+        }
+        .p-button-sm {
+        padding: 0.225rem 0.485rem;
         }
       `
     }

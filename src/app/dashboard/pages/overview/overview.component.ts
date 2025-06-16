@@ -8,6 +8,9 @@ import {
 import {OverviewScoreComponent} from '../../components/overview-score/overview-score.component';
 import {WeightTrendComponent} from '../../components/weight-trend/weight-trend.component';
 import {AppInputComponent} from '../../../shared-components/app-input/app-input.component';
+import {TreatmentPlanCardComponent} from '../../components/treatment-plan-card/treatment-plan-card.component';
+import {Dialog} from 'primeng/dialog';
+import {DogProfilePopupComponent} from '../../components/dog-profile-popup/dog-profile-popup.component';
 
 @Component({
   selector: 'app-overview',
@@ -17,7 +20,10 @@ import {AppInputComponent} from '../../../shared-components/app-input/app-input.
     DogOverviewInformationCardsComponent,
     OverviewScoreComponent,
     WeightTrendComponent,
-    AppInputComponent
+    AppInputComponent,
+    TreatmentPlanCardComponent,
+    Dialog,
+    DogProfilePopupComponent
   ],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.scss'

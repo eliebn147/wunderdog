@@ -12,23 +12,32 @@ input[type='text'],
 input[type='number'] {
   outline: none;
   font-size: 12px;
+  background-color: #eef2f5;
+  border-color: transparent !important;
 
   &:hover,
   &:focus {
-    border-color: #ced4da !important;
+    border-color: transparent !important;
   }
 }
 
 .icon-container {
   display: flex;
   justify-content: center;
-  color: #495057;
-  background: #ffffff;
+  color: #64748b;
+  background: #eef2f5;
   height: 30px;
+  border-color: transparent !important;
+  width: 33px;
+  border-radius: 0 !important;
+  border-top-left-radius: 26px !important;
+  border-bottom-left-radius: 26px !important;
+  height: 30px;
+  border-right: none;
 
   &:hover {
-    background: #ffffff;
-    color: #495057;
+    background: #eef2f5;
+    color: #64748b;
   }
 }
 

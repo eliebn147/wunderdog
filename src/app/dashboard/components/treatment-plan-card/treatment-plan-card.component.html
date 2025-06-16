@@ -1,0 +1,17 @@
+<div class="p-2 card">
+  <div class="flex justify-content-between align-items-center">
+    <div class="title">{{ data().title }}</div>
+    <div class="icon">
+      <i class="pi pi-ellipsis-h"></i>
+    </div>
+  </div>
+  <hr class="w-full"/>
+  <div>
+    @for(desc of data().information; track $index) {
+      <div class="flex">
+        <div class="label">{{desc.label + ':'}}&nbsp;</div>
+        <div class="value">{{desc.value}}</div>
+      </div>
+    }
+  </div>
+</div>
