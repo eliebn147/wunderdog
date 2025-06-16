@@ -21,8 +21,27 @@
           <i style="font-size: 12px" class="pi pi-ellipsis-h"></i>
         </div>
         <div style="font-weight: 600">REX</div>
-        <app-dog-overview-information-status style="width: 90px" [value]="$index%2 === 0 ? 'No Stress Signs' : 'Missed Food'" [severity]="$index%2 === 0 ? 'success' :'danger'" />
+        <app-dog-overview-information-status style="width: 90px"
+                                             [value]="$index%2 === 0 ? 'No Stress Signs' : 'Missed Food'"
+                                             [severity]="$index%2 === 0 ? 'success' :'danger'"/>
       </div>
     }
+  </div>
+  <div #scheduler_here class="dhx_cal_container" style="width: calc(100% - 50px); height:60vh">
+    <div class="dhx_cal_navline">
+      <div class="dhx_cal_prev_button">&nbsp;</div>
+      <div class="dhx_cal_next_button">&nbsp;</div>
+      <div class="dhx_cal_today_button"></div>
+      <div class="dhx_cal_date"></div>
+      <div class="dhx_cal_tab mr-1" name="day_tab"></div>
+      <div class="dhx_cal_tab mr-1" name="week_tab"></div>
+      <div class="dhx_cal_tab" name="month_tab"></div>
+    </div>
+    <div class="dhx_cal_header"></div>
+    <div class="dhx_cal_data"></div>
+  </div>
+  <div>
+    <div>Last Touch Point: Today 9:45AM</div>
+    <div style="font-size: 12px; color: gray">By Adam Sharaf "Kennel Stuff"</div>
   </div>
 </div>
