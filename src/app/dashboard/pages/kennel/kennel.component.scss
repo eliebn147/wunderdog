@@ -1,0 +1,32 @@
+:host {
+  width: calc(100vw - 50px);
+}
+
+.kennel {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  .i-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--p-primary-500);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+
+  .kennel-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    border: 1px solid var(--p-primary-200);
+    padding: 4px;
+    background-color: #f4f7fc;
+    font-size: 14px;
+  }
+}

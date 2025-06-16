@@ -10,6 +10,6 @@ import {NgClass} from '@angular/common';
   styleUrl: './dog-overview-information-status.component.scss'
 })
 export class DogOverviewInformationStatusComponent {
-  severity = input<'success' | 'warning'>('success');
+  severity = input<'success' | 'warning' | 'danger'>('success');
   value = input<string>('');
 }
