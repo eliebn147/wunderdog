@@ -16,6 +16,15 @@ const preset = definePreset(Aura, {
       900: '#00241c',
       950: '#001a13'
     }
+  },
+  components: {
+    button: {
+      css: () => `
+        .p-button-sm .p-button-icon {
+          font-size: 0.75rem;
+        }
+      `
+    }
   }
 });
 

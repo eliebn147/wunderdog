@@ -1,6 +1,38 @@
 <div class="grid grid-nogutter overview">
-  <div style="height: 100vh; background: lightblue; width: 80%">
-    Hello
+  <div class="col-6 md:col-8 lg:col-9">
+    <div class="overview-left">
+      <div class="flex justify-content-between align-items-center w-full">
+        <h3 class="m-0"><i class="pi pi-bars mr-2"></i>Dog Overview</h3>
+        <div class="flex gap-2">
+          <div class="i-primary">
+            <i class="pi pi-print"></i>
+          </div>
+          <div class="i-primary">
+            <i class="pi pi-file-arrow-up"></i>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-content-between align-items-center w-full">
+        <div class="sub-title">Overview on QUEEN</div>
+        <div>
+          <p-button label="Add Data" icon="pi pi-plus" [rounded]="true" [outlined]="true" size="small"/>
+        </div>
+      </div>
+      <div class="flex align-items-stretch gap-2">
+        <app-overview-score label="MISSION READINESS SCORE" style="flex: 1"/>
+        <app-overview-score label="PAST READINESS SCORE" style="flex: 1" severity="secondary"/>
+        <app-weight-trend style="flex: 1"/>
+      </div>
+      <div class="flex align-items-stretch gap-2">
+        @for (info of dashboardService.getDogOverview().information; track $index) {
+          <app-dog-overview-information-cards style="flex: 1" [severity]="info.severity" [value]="info.value"
+                                              [title]="info.title"/>
+        }
+      </div>
+      <div style="width: 200px;">
+        <app-input icon="pi pi-search" placeholder="Search by anything"/>
+      </div>
+    </div>
   </div>
-  <app-dog-profile style="width: 20%"/>
+  <app-dog-profile class="col-6 md:col-4 lg:col-3"/>
 </div>

@@ -1,0 +1,19 @@
+.card-overview {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 16px 16px;
+  border: 1px solid var(--p-primary-500);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .success {
+    color: var(--p-green-500);
+  }
+
+  .warning {
+    color: var(--p-yellow-500);
+  }
+}
